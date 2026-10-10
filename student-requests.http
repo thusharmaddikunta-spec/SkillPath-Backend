@@ -1,0 +1,48 @@
+
+### 1. Get all students
+GET http://localhost:8080/api/students
+
+###
+
+### 2. Get skills for student ID 2
+GET http://localhost:8080/api/students/2/skills
+
+###
+
+### 3. Add Java skill
+POST http://localhost:8080/api/students/2/skills
+Content-Type: application/json
+
+{
+  "skillName": "Java",
+  "proficiencyLevel": "Intermediate"
+}
+
+###
+
+### 4. Add SQL skill
+POST http://localhost:8080/api/students/2/skills
+Content-Type: application/json
+
+{
+  "skillName": "SQL",
+  "proficiencyLevel": "Beginner"
+}
+
+###
+
+### 5. Update skill ID 1
+PUT http://localhost:8080/api/students/2/skills/1
+Content-Type: application/json
+
+{
+  "skillName": "Java",
+  "proficiencyLevel": "Advanced"
+}
+
+###
+
+### 6. Delete skill ID 1
+DELETE http://localhost:8080/api/students/2/skills/1
+
+###
