@@ -48,8 +48,7 @@ public class SkillGapService {
                 studentSkillRepository.findByStudentId(studentId);
 
         // Get required skills for the selected career
-        List<String> requiredSkills =
-                getRequiredSkills(targetCareer);
+        List<String> requiredSkills = getRequiredSkills(targetCareer);
 
         List<String> matchedSkills = new ArrayList<>();
         List<String> missingSkills = new ArrayList<>();
@@ -143,6 +142,16 @@ public class SkillGapService {
                         "SQL",
                         "Spring Boot",
                         "Git"
+                );
+
+            case "cybersecurity analyst":
+            case "cyber security analyst":
+                return Arrays.asList(
+                        "Networking",
+                        "Linux",
+                        "Cybersecurity Fundamentals",
+                        "SIEM",
+                        "Incident Response"
                 );
 
             default:
